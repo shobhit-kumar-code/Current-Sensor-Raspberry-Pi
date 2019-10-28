@@ -1,0 +1,45 @@
+
+
+<!doctype html>
+<html>
+      
+   <body>
+   
+      <h1>Current Database</h1>
+      <div id="chart1" class="chart1" style=" height:50%">
+      </div>
+
+      <table border="1">
+         <thead>
+           <tr>
+             
+             <th >Time</th>
+             <th >Current</th>
+           </tr>
+         </thead>
+         <tbody>
+           {% for x in currenttable %}
+           <tr>        
+             <td>{{x['timestamp']}}</td>
+             <td>{{x['current']}}</td>
+           </tr>
+           {% endfor %}
+         </tbody>
+       </table>
+
+
+
+
+       
+   </body>
+   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+   <script type="text/javascript">
+     
+    
+      var graphs = {{graphJSON|safe }};
+      console.log('hi')
+      Plotly.plot('chart1',graphs,{}); 
+  </script>
+</html>
