@@ -144,7 +144,7 @@ virtualenv-clone==0.5.3
 virtualenvwrapper==4.8.4
 wcwidth==0.1.7
 webencodings==0.5.1
-Werkzeug==0.16.0
+Werkzeug==2.3.8
 widgetsnbextension==3.5.1
 wrapt==1.11.2
 xdiagnose==3.8.4.1
